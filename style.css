@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+body{
+  background-color: whitesmoke;
+  font-family: Verdana, Helvetica, Arial;;
+}
+
+#bloco{
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 10px;
+  width: 350px;
+  height: 150px;
+  text-align: center;
+  font-family: Verdana, Helvetica, Arial;
+
+}
+
+a{
+  color: black;
+}
