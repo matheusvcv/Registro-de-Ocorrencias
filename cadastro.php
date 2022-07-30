@@ -29,6 +29,13 @@
 
 		</form>
 
+		<?php 	
+
+			if($inserir === true){
+				echo"<p>Aluno cadastrado com sucesso!</p>";
+			} 
+		?>
+
 </body>
 </html>
 

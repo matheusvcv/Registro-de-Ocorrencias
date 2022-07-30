@@ -19,3 +19,7 @@ body{
 a{
   color: black;
 }
+
+table{
+  width: 500px;
+}

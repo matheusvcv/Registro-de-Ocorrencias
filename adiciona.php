@@ -8,4 +8,6 @@
 		$turma = $_POST['turma'];
 		$turno = $_POST['turno'];
 
-	$inserir = $conex-> query("INSERT INTO alunos VALUES('$nome', '$matricula', '$data', '$turma', '$turno')");
+	$inserir = $conex-> query("INSERT INTO alunos VALUES('$nome', '$matricula', '$data', '$turma', '$turno', '$ocorrencia', '$data-ocorrencia')");
+
+	header("Location: index.php");
