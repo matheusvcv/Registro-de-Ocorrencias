@@ -1,6 +1,16 @@
 <?php
-
+	
 	require "conex.php";
+	require "src/aluno.php";
+
+	if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+		$adiciona = New Aluno($conex);
+		$adiciona-> adicionaAluno($_POST['nome'], $_POST['matricula'], $_POST['data'], $_POST['turma'], $_POST['turno']);
+
+	}
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +23,7 @@
 	</head>
 <body>
 	<h1>Cadastro de Alunos</h1>
-		<form method="POST" action="adiciona.php">
+		<form method="POST" action="cadastro.php">
 
 			<strong>Nome do Aluno:</strong><br>
 			<input type="text" name="nome"><br>
@@ -28,13 +38,6 @@
 			<br><input type="submit" value="Cadastrar">
 
 		</form>
-
-		<?php 	
-
-			if($inserir === true){
-				echo"<p>Aluno cadastrado com sucesso!</p>";
-			} 
-		?>
 
 </body>
 </html>

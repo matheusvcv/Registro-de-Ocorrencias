@@ -2,6 +2,7 @@
 
 	require "conex.php";
 	require "src/aluno.php";
+	require "adiciona.php";
 
 	$exibe_alunos = New Aluno($conex);
   	$alunos = $exibe_alunos-> exibirAlunos();
@@ -23,15 +24,22 @@
 			<tr>
 				<th>Nome</th>
 				<th>Matrícula</th>
+				<th>Nascimento</th>
 				<th>Turma</th>
 				<th>Turno</th>
+				<th>Adicionar Ocorrência</th>
+				<th>Deletar</th>
 			</tr>
 				<?php foreach($alunos as $aluno): ?>
 			<tr>	
 					<td><?php echo $aluno['nome']; ?></td>
 					<td><?php echo $aluno['matricula']; ?></td>
+					<td><?php echo $aluno['nascimento']; ?></td>
 					<td><?php echo $aluno['turma']; ?></td>
 					<td><?php echo $aluno['turno']; ?></td>
+					<td><img src="img/maais.png"></td>
+					<td><a href="deletar-cadastro.php"><img src="img/del.png"></a></td>
+
 			</tr>
 				<?php endforeach; ?>
 		</table>
