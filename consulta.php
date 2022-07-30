@@ -4,18 +4,11 @@
 	require "src/aluno.php";
 
 	$exibe_alunos = New Aluno($conex);
+  	$alunos = $exibe_alunos-> exibirAlunos();
 
-   $alunos = $exibe_alunos-> exibirAlunos();
+?>
 
-   foreach($alunos as $aluno){
-
-   		echo $aluno['nome'] . ' ' . $aluno['matricula'] . ' ' . $aluno['turma'] . ' ' . $aluno['turno'] . ' ' . '<br>';
-
-   }
-
-   ?>
-
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -33,7 +26,14 @@
 				<th>Turma</th>
 				<th>Turno</th>
 			</tr>
+				<?php foreach($alunos as $aluno): ?>
+			<tr>	
+					<td><?php echo $aluno['nome']; ?></td>
+					<td><?php echo $aluno['matricula']; ?></td>
+					<td><?php echo $aluno['turma']; ?></td>
+					<td><?php echo $aluno['turno']; ?></td>
+			</tr>
+				<?php endforeach; ?>
 		</table>
 	</body>
 </html>
-

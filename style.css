@@ -20,6 +20,19 @@ a{
   color: black;
 }
 
+table, td, th{
+  border: 1px solid black;
+  vertical-align: middle;
+  text-align: center;
+}
+
 table{
-  width: 500px;
+  width: 800px;;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th{
+  background-color: white;
+
 }

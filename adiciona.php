@@ -10,4 +10,4 @@
 
 	$inserir = $conex-> query("INSERT INTO alunos VALUES('$nome', '$matricula', '$data', '$turma', '$turno', '$ocorrencia', '$data-ocorrencia')");
 
-	header("Location: index.php");
+	header("Location: consulta.php");
