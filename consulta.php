@@ -31,7 +31,7 @@
 			</tr>
 				<?php foreach($alunos as $aluno): ?>
 			<tr>	
-					<td><?php echo $aluno['nome']; ?></td>
+					<td><a href="pag-aluno.php?nome=<?php echo $aluno['nome']; ?>"><?php echo $aluno['nome']; ?></a></td>
 					<td><?php echo $aluno['matricula']; ?></td>
 					<td><?php echo $aluno['nascimento']; ?></td>
 					<td><?php echo $aluno['turma']; ?></td>

@@ -29,6 +29,19 @@
 			return $alunos;
 		}
 
+		public function exibirPorNome(string $nome): array
+		{
+			$exibirPorNome = $this->conexao->prepare("SELECT * FROM alunos WHERE nome=?");
+
+			$exibirPorNome-> bind_param('s', $nome);
+
+			$exibirPorNome-> execute();
+
+			$aluno = $exibirPorNome->get_result()->fetch_assoc();
+
+			return $aluno;
+		}
+
 		public function deletaAluno(string $nome): void
 		{
 			$deletar = $this->conexao->prepare('DELETE FROM alunos WHERE name = ?');

@@ -39,6 +39,8 @@
 
 		</form>
 
+		<?php header('Location:consulta.php'); ?>
+
 </body>
 </html>
 
