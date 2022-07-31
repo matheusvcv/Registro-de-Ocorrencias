@@ -4,6 +4,15 @@
 
 	$delete = New Aluno($conex);
 	$deletar = $delete->deletaAluno($_POST['nome']);
+
+	if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+		$deletar = New Aluno($conex);
+		$deletar-> deletaAluno($_POST['nome']);
+
+		header('Location:cadastro.php');
+
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,5 +24,6 @@
 		<title>Deletar Cadastro</title>
 	</head>
 	<body>
+		<p>Você tem certeza que gostaria de excluir esse aqruivo?</p>
 	</body>
 </html>

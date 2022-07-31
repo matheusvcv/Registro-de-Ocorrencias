@@ -2,7 +2,6 @@
 
 	require "conex.php";
 	require "src/aluno.php";
-	require "adiciona.php";
 
 	$exibe_alunos = New Aluno($conex);
   	$alunos = $exibe_alunos-> exibirAlunos();
