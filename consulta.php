@@ -42,5 +42,6 @@
 			</tr>
 				<?php endforeach; ?>
 		</table>
+		<a href="index.php"><button>Sair</button></a>
 	</body>
 </html>
