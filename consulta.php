@@ -26,8 +26,10 @@
 				<th>Nascimento</th>
 				<th>Turma</th>
 				<th>Turno</th>
+				<th>Editar dados</th>
 				<th>Adicionar Ocorrência</th>
 				<th>Deletar</th>
+
 			</tr>
 				<?php foreach($alunos as $aluno): ?>
 			<tr>	
@@ -36,11 +38,12 @@
 					<td><?php echo $aluno['nascimento']; ?></td>
 					<td><?php echo $aluno['turma']; ?></td>
 					<td><?php echo $aluno['turno']; ?></td>
-					<td><a href="editar-cadastro.php?matricula=<?php echo $aluno['matricula']; ?>"><img src="img/maais.png"></a></td>
-					<td><a href="deletar-cadastro.php?matricula=<?php echo $aluno['matricula']; ?>"><img src="img/del.png"></a></td>
+					<td><a href="editar-cadastro.php?matricula=<?php echo $aluno['matricula']; ?>"><img src="img/update.png"></a></td>
+					<td><a href="inserir-ocorrencia.php?matricula=<?php echo $aluno['matricula']; ?>"><img src="img/mais.png"></a></td>
+					<td><a href="deletar-cadastro.php?matricula=<?php echo $aluno['matricula']; ?>"><img src="img/delete.png"></a></td>
 			</tr>
 				<?php endforeach; ?>
-		</table>
+		</table><br>
 		<a href="index.php"><button>Sair</button></a>
 	</body>
 </html>

@@ -27,7 +27,7 @@ table, td, th{
 }
 
 table{
-  width: 800px;;
+  width: 80%;
   table-layout: fixed;
   border-collapse: collapse;
 }

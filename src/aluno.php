@@ -60,6 +60,15 @@
 			$alterar-> execute();
 		}
 
+		public function insereOcorrencia(string $ocorrencia, string $data_ocorrencia): string
+		{
+			$inserir = $this->conexao->prepare("INSERT INTO alunos(ocorrencia, data_ocorrencia) VALUES(?, ?)");
+
+			$inserir-> bind_param('ss', $ocorrencia, $data_ocorrencia);
+
+			$inserir-> execute();
+		}
+
 	}
 
 

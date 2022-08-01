@@ -22,13 +22,10 @@
 		<title>Deletar Cadastro</title>
 	</head>
 	<body>
-		<pre><?php var_dump($_SERVER); ?></pre>
 		<h1>Você realmente quer excluir esse artigo?</h1>
 		<form method="POST" action="deletar-cadastro.php">
-
 			<input type="hidden" name="matricula" value="<?php echo $_GET['matricula']; ?>">
 				<button>Excluir</button>
-
 		</form>
 	</body>
 </html>

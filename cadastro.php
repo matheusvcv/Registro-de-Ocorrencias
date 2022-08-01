@@ -36,7 +36,13 @@
 			<br><strong>Turma:</strong><br>
 			<input type="text" name="turma"><br>
 			<br><strong>Turno:</strong><br>
-			<input type="text" name="turno"><br>
+			<select name="turno">
+				<option value="Resposta Ausente">Escolha uma opção</option>
+				<option value="Matutino">Matutino</option>
+				<option value="Vespertino">Vespertino</option>
+				<option value="Integral">Integral</option>
+			</select><br>
+
 			<br><input type="submit" value="Cadastrar">
 		</form>
 </body>

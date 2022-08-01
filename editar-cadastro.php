@@ -31,12 +31,18 @@
 			<form method="POST" action="editar-cadastro.php">		
 				<p><strong>Nome:</strong> <input type="text" name="nome" value="<?php echo $aluno['nome']; ?>"></p>
 				<p><strong>Matricula:</strong> <input type="text" name="matricula" value="<?php echo $aluno['matricula']; ?>"></p>
-				<p><strong>Data de Nascimento:</strong> <input type="text" name="nascimento" value="<?php echo $aluno['nascimento']; ?>"></p>
+				<p><strong>Data de Nascimento:</strong> <input type="date" name="nascimento" value="<?php echo $aluno['nascimento']; ?>"></p>
 				<p><strong>Turma:</strong> <input type="text" name="turma" value="<?php echo $aluno['turma']; ?>"></p>
-				<p><strong>Turno:</strong> <input type="text" name="turno" value="<?php echo $aluno['turno']; ?>"></p>
+
+				<p><strong>Turno:</strong><select name="turno" value="<?php echo $aluno['turno']; ?>">
+					<option value="Resposta Ausente">Escolha uma opção</option>
+					<option value="Matutino">Matutino</option>
+					<option value="Vespertino">Vespertino</option>
+					<option value="Integral">Integral</option>
+				</select><br>
 
 					<input type="hidden" name="matricula" value="<?php echo $aluno['matricula'];?>">
-					<input type="submit" value="Aletrar">
+					<br><input type="submit" value="Aletrar">
 			</form>
 	</body>
 </html>
