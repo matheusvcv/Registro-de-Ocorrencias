@@ -22,7 +22,5 @@
 	<strong><p>Data de Nascimento: </strong><?php echo $aluno['nascimento']; ?></p>
 	<strong><p>Turma: </strong><?php echo $aluno['turma']; ?></p>
 	<strong><p>Turno: </strong><?php echo $aluno['turno']?></p>
-
-	<a href="index.php"><button>Sair</button></a>
 </body>
 </html>

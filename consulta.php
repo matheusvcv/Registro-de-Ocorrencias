@@ -37,8 +37,7 @@
 					<td><?php echo $aluno['turma']; ?></td>
 					<td><?php echo $aluno['turno']; ?></td>
 					<td><img src="img/maais.png"></td>
-					<td><a href="deletar-cadastro.php"><img src="img/del.png"></a></td>
-
+					<td><a href="deletar-cadastro.php?nome=<?php echo $aluno['nome']; ?>"><img src="img/del.png"></a></td>
 			</tr>
 				<?php endforeach; ?>
 		</table>

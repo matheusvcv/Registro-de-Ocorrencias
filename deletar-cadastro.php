@@ -2,16 +2,14 @@
 	require "conex.php";
 	require "src/aluno.php";
 
-	$delete = New Aluno($conex);
-	$deletar = $delete->deletaAluno($_POST['nome']);
 
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 		$deletar = New Aluno($conex);
 		$deletar-> deletaAluno($_POST['nome']);
 
-		header('Location:cadastro.php');
-
+		header('Location:consulta.php');
+		
 	}
 ?>
 <!DOCTYPE html>
@@ -24,6 +22,12 @@
 		<title>Deletar Cadastro</title>
 	</head>
 	<body>
-		<p>Você tem certeza que gostaria de excluir esse aqruivo?</p>
+		<h1>Você realmente quer excluir esse artigo?</h1>
+		<form method="POST" action="deletar-cadastro.php">
+
+			<input type="hidden" name="nome" value="<?php echo $_GET['nome']; ?>">
+				<button>Excluir</button>
+
+		</form>
 	</body>
 </html>

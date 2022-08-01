@@ -44,11 +44,11 @@
 
 		public function deletaAluno(string $nome): void
 		{
-			$deletar = $this->conexao->prepare('DELETE FROM alunos WHERE name = ?');
+			$deletar = $this->conexao->prepare('DELETE FROM alunos WHERE nome =?');
 
-			$deletar = bind_param('s', $nome);
+			$deletar-> bind_param('s', $nome);
 
-			$deletar = execute();
+			$deletar-> execute();
 		}
 
 

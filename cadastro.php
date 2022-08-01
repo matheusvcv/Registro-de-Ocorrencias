@@ -8,6 +8,8 @@
 		$adiciona = New Aluno($conex);
 		$adiciona-> adicionaAluno($_POST['nome'], $_POST['matricula'], $_POST['data'], $_POST['turma'], $_POST['turno']);
 
+		header('Location: consulta.php');
+		die();
 	}
 
 
@@ -36,11 +38,7 @@
 			<br><strong>Turno:</strong><br>
 			<input type="text" name="turno"><br>
 			<br><input type="submit" value="Cadastrar">
-
 		</form>
-
-		<?php header('Location:consulta.php'); ?>
-
 </body>
 </html>
 
