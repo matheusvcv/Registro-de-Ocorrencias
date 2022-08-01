@@ -44,11 +44,20 @@
 
 		public function deletaAluno(string $matricula): void
 		{
-			$deletar = $this->conexao->prepare('DELETE FROM alunos WHERE matricula =?');
+			$deletar = $this->conexao->prepare("DELETE FROM alunos WHERE matricula =?");
 
 			$deletar-> bind_param('s', $matricula);
 
 			$deletar-> execute();
+		}
+
+		public function alteraAluno(string $nome, string $nascimento, string $turma, string $turno, string $matricula): void
+		{
+			$alterar = $this->conexao->prepare("UPDATE alunos SET nome=?, nascimento=?, turma=?, turno=? WHERE matricula=?");
+
+			$alterar-> bind_param('sssss', $nome, $nascimento, $turma, $turno, $matricula);
+
+			$alterar-> execute();
 		}
 
 	}

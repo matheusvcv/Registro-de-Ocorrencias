@@ -22,6 +22,7 @@
 		<title>Deletar Cadastro</title>
 	</head>
 	<body>
+		<pre><?php var_dump($_SERVER); ?></pre>
 		<h1>Você realmente quer excluir esse artigo?</h1>
 		<form method="POST" action="deletar-cadastro.php">
 

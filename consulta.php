@@ -36,7 +36,7 @@
 					<td><?php echo $aluno['nascimento']; ?></td>
 					<td><?php echo $aluno['turma']; ?></td>
 					<td><?php echo $aluno['turno']; ?></td>
-					<td><img src="img/maais.png"></td>
+					<td><a href="editar-cadastro.php?matricula=<?php echo $aluno['matricula']; ?>"><img src="img/maais.png"></a></td>
 					<td><a href="deletar-cadastro.php?matricula=<?php echo $aluno['matricula']; ?>"><img src="img/del.png"></a></td>
 			</tr>
 				<?php endforeach; ?>
