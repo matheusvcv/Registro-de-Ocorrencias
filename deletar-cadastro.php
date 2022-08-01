@@ -6,7 +6,7 @@
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 		$deletar = New Aluno($conex);
-		$deletar-> deletaAluno($_POST['nome']);
+		$deletar-> deletaAluno($_POST['matricula']);
 
 		header('Location:consulta.php');
 		
@@ -25,7 +25,7 @@
 		<h1>Você realmente quer excluir esse artigo?</h1>
 		<form method="POST" action="deletar-cadastro.php">
 
-			<input type="hidden" name="nome" value="<?php echo $_GET['nome']; ?>">
+			<input type="hidden" name="matricula" value="<?php echo $_GET['matricula']; ?>">
 				<button>Excluir</button>
 
 		</form>

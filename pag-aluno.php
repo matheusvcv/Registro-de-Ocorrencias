@@ -3,7 +3,7 @@
 	require "src/aluno.php";
 
 	$cadastroAluno = New Aluno($conex);
-	$aluno = $cadastroAluno->exibirPorNome($_GET['nome']);
+	$aluno = $cadastroAluno->exibirIndividual($_GET['matricula']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,6 +21,8 @@
 	<strong><p>Matrícula: </strong><?php echo $aluno['matricula']; ?></p>
 	<strong><p>Data de Nascimento: </strong><?php echo $aluno['nascimento']; ?></p>
 	<strong><p>Turma: </strong><?php echo $aluno['turma']; ?></p>
-	<strong><p>Turno: </strong><?php echo $aluno['turno']?></p>
+	<strong><p>Turno: </strong><?php echo $aluno['turno']?></p><br>
+	<a href="consulta.php"><button>Voltar</button></a>
+
 </body>
 </html>

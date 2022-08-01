@@ -31,13 +31,13 @@
 			</tr>
 				<?php foreach($alunos as $aluno): ?>
 			<tr>	
-					<td><a href="pag-aluno.php?nome=<?php echo $aluno['nome']; ?>"><?php echo $aluno['nome']; ?></a></td>
+					<td><a href="pag-aluno.php?matricula=<?php echo $aluno['matricula']; ?>"><?php echo $aluno['nome']; ?></a></td>
 					<td><?php echo $aluno['matricula']; ?></td>
 					<td><?php echo $aluno['nascimento']; ?></td>
 					<td><?php echo $aluno['turma']; ?></td>
 					<td><?php echo $aluno['turno']; ?></td>
 					<td><img src="img/maais.png"></td>
-					<td><a href="deletar-cadastro.php?nome=<?php echo $aluno['nome']; ?>"><img src="img/del.png"></a></td>
+					<td><a href="deletar-cadastro.php?matricula=<?php echo $aluno['matricula']; ?>"><img src="img/del.png"></a></td>
 			</tr>
 				<?php endforeach; ?>
 		</table>

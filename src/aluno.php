@@ -29,11 +29,11 @@
 			return $alunos;
 		}
 
-		public function exibirPorNome(string $nome): array
+		public function exibirIndividual(string $matricula): array
 		{
-			$exibirPorNome = $this->conexao->prepare("SELECT * FROM alunos WHERE nome=?");
+			$exibirPorNome = $this->conexao->prepare("SELECT * FROM alunos WHERE matricula= ?");
 
-			$exibirPorNome-> bind_param('s', $nome);
+			$exibirPorNome-> bind_param('s', $matricula);
 
 			$exibirPorNome-> execute();
 
@@ -42,15 +42,14 @@
 			return $aluno;
 		}
 
-		public function deletaAluno(string $nome): void
+		public function deletaAluno(string $matricula): void
 		{
-			$deletar = $this->conexao->prepare('DELETE FROM alunos WHERE nome =?');
+			$deletar = $this->conexao->prepare('DELETE FROM alunos WHERE matricula =?');
 
-			$deletar-> bind_param('s', $nome);
+			$deletar-> bind_param('s', $matricula);
 
 			$deletar-> execute();
 		}
-
 
 	}
 
