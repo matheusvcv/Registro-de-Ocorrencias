@@ -6,7 +6,7 @@
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 		$adiciona = New Aluno($conex);
-		$adiciona-> adicionaAluno($_POST['nome'], $_POST['matricula'], $_POST['data'], $_POST['turma'], $_POST['turno']);
+		$adiciona-> adicionaAluno($_POST['nome'], $_POST['matricula'], $_POST['data'], $_POST['turma'], $_POST['turno'], $_POST['ocorrencia']);
 
 		header('Location: consulta.php');
 		die();

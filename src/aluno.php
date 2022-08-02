@@ -42,6 +42,19 @@
 			return $aluno;
 		}
 
+		/*public function exibeOcorrencia(string $matricula): array
+		{
+			$exibe = $this->conexao->query("SELECT * FROM ocorrencias WHERE matricula=$matricula");
+
+			/*$exibe-> bind_param('s', $matricula);
+
+			$exibe->execute();
+
+			$exibeAluno = $exibe->get_result()->fetch_assoc();
+
+			return $exibeAluno;
+		}*/
+
 		public function deletaAluno(string $matricula): void
 		{
 			$deletar = $this->conexao->prepare("DELETE FROM alunos WHERE matricula =?");
@@ -60,14 +73,14 @@
 			$alterar-> execute();
 		}
 
-		public function insereOcorrencia(string $ocorrencia, string $data_ocorrencia): string
+		/*public function insereOcorrencia(string $ocorrencia)
 		{
-			$inserir = $this->conexao->prepare("INSERT INTO alunos(ocorrencia, data_ocorrencia) VALUES(?, ?)");
+			$inserir = $this->conexao->prepare("INSERT INTO alunos(ocorrencia) VALUES(?)");
 
-			$inserir-> bind_param('ss', $ocorrencia, $data_ocorrencia);
+			$inserir-> bind_param('s', $ocorrencia);
 
 			$inserir-> execute();
-		}
+		}*/
 
 	}
 

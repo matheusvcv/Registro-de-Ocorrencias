@@ -41,6 +41,11 @@
 					<option value="Integral">Integral</option>
 				</select><br>
 
+
+		<p><strong>Data da ocorrência:</strong></p><input type="date" name="data_ocorrencia"><br>
+		<strong><p>Relate o ocorrido:</p></strong><textarea name="ocorrencia" placeholder="Escreva aqui o ocorrido" cols="30" rows="10"></textarea><br>
+
+
 					<input type="hidden" name="matricula" value="<?php echo $aluno['matricula'];?>">
 					<br><input type="submit" value="Aletrar">
 			</form>
