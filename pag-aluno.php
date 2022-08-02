@@ -5,10 +5,9 @@
 	$cadastroAluno = New Aluno($conex);
 	$aluno = $cadastroAluno->exibirIndividual($_GET['matricula']);
 
-	$exibeAluno = New Aluno($conex);
-	$exibe = $exibeAluno-> exibeOcorrencia($_GET['ocorrencia']);
+	$exibeOcorrencia = New Aluno($conex);
+	$ocorrencias = $exibeOcorrencia->exibirOcorrencias($_GET['matricula']);
 
-	
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,17 +28,31 @@
 	<strong><p>Turma: </strong><?php echo $aluno['turma']; ?></p>
 	<strong><p>Turno: </strong><?php echo $aluno['turno']?></p>
 
-	<h2>Ocorrências:</h2>
-
-	<strong><p>Data da ocorrÊncia:</p></strong>
-
-	<?php echo $exibe['data_ocorrencia']; ?>
-	<?php echo $exibe['ocorrencia']; ?>
+	<h2>Ocorrências</h2>
 
 
 
-	<h3>Inserir nova ocorrência:</h3>
-	<p></p>
+
+		<?php foreach($ocorrencias as $ocorrencia): ?>
+
+		<div id="">
+			<strong><p>Data ocorrencia:</strong> 
+
+			<?php echo $ocorrencia['data_ocorrencia']; ?></p>
+
+			<strong><p>Ocorrencia:</p></strong> 
+
+			<p><?php echo $ocorrencia['ocorrencia']; ?></p>
+
+		</div>
+
+
+
+		<?php endforeach; ?>
+
+
+
+
 
 	<a href="consulta.php"><button>Voltar</button></a>
 

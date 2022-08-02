@@ -30,7 +30,6 @@
 
 			<form method="POST" action="editar-cadastro.php">		
 				<p><strong>Nome:</strong> <input type="text" name="nome" value="<?php echo $aluno['nome']; ?>"></p>
-				<p><strong>Matricula:</strong> <input type="text" name="matricula" value="<?php echo $aluno['matricula']; ?>"></p>
 				<p><strong>Data de Nascimento:</strong> <input type="date" name="nascimento" value="<?php echo $aluno['nascimento']; ?>"></p>
 				<p><strong>Turma:</strong> <input type="text" name="turma" value="<?php echo $aluno['turma']; ?>"></p>
 
@@ -40,11 +39,6 @@
 					<option value="Vespertino">Vespertino</option>
 					<option value="Integral">Integral</option>
 				</select><br>
-
-
-		<p><strong>Data da ocorrência:</strong></p><input type="date" name="data_ocorrencia"><br>
-		<strong><p>Relate o ocorrido:</p></strong><textarea name="ocorrencia" placeholder="Escreva aqui o ocorrido" cols="30" rows="10"></textarea><br>
-
 
 					<input type="hidden" name="matricula" value="<?php echo $aluno['matricula'];?>">
 					<br><input type="submit" value="Aletrar">

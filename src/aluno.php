@@ -20,6 +20,15 @@
 			$adicionar-> execute();
 		}
 
+		public function adicionaOcorrencia(string $data_ocorrencia, string $ocorrencia, string $matricula)
+		{
+			$inserir = $this->conexao->prepare("INSERT INTO ocorrencias(data_ocorrencia, ocorrencia, matricula) VALUES(?,?,?)");
+
+			$inserir-> bind_param('sss', $data_ocorrencia, $ocorrencia, $matricula);
+
+			$inserir-> execute();
+		}
+
 		public function exibirAlunos(): array
 		{
 			$exibir = $this->conexao->query("SELECT nome, matricula, nascimento, turma, turno FROM alunos");
@@ -27,6 +36,17 @@
 			$alunos = $exibir-> fetch_all(MYSQLI_ASSOC);
 
 			return $alunos;
+		}
+
+		public function exibirOcorrencias(string $matricula): array
+		{
+
+			$exibirOcorrencias = $this->conexao->query("SELECT data_ocorrencia, ocorrencia FROM ocorrencias WHERE matricula = $matricula");
+
+			$ocs = $exibirOcorrencias-> fetch_all(MYSQLI_ASSOC);
+
+			return $ocs;
+
 		}
 
 		public function exibirIndividual(string $matricula): array
@@ -40,20 +60,8 @@
 			$aluno = $exibirPorNome->get_result()->fetch_assoc();
 
 			return $aluno;
+
 		}
-
-		/*public function exibeOcorrencia(string $matricula): array
-		{
-			$exibe = $this->conexao->query("SELECT * FROM ocorrencias WHERE matricula=$matricula");
-
-			/*$exibe-> bind_param('s', $matricula);
-
-			$exibe->execute();
-
-			$exibeAluno = $exibe->get_result()->fetch_assoc();
-
-			return $exibeAluno;
-		}*/
 
 		public function deletaAluno(string $matricula): void
 		{
@@ -73,14 +81,15 @@
 			$alterar-> execute();
 		}
 
-		/*public function insereOcorrencia(string $ocorrencia)
+		public function alteraOcorrencia(string $data_ocorrencia, string $ocorrencia, string $matricula): void
 		{
-			$inserir = $this->conexao->prepare("INSERT INTO alunos(ocorrencia) VALUES(?)");
+			$alterar = $this->conexao->prepare("UPDATE alunos SET data_ocorrencia=?, ocorrencia=? WHERE matricula=?");
 
-			$inserir-> bind_param('s', $ocorrencia);
+			$alterar-> bind_param('sss', $data_ocorrencia, $ocorrencia, $matricula);
 
-			$inserir-> execute();
-		}*/
+			$alterar-> execute();
+		}
+
 
 	}
 

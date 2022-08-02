@@ -31,6 +31,8 @@
 				<th>Deletar</th>
 
 			</tr>
+				<?php var_dump($alunos) ?>
+
 				<?php foreach($alunos as $aluno): ?>
 			<tr>	
 					<td><a href="pag-aluno.php?matricula=<?php echo $aluno['matricula']; ?>"><?php echo $aluno['nome']; ?></a></td>
