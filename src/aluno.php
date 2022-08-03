@@ -90,6 +90,16 @@
 			$alterar-> execute();
 		}
 
+		public function getDados()
+		{
+			$getDados = $this->conexao->query("SELECT usuario, senha FROM login");
+
+			$dados = $getDados->fetch_all(MYSQLI_ASSOC);
+
+			return $dados;
+
+		}
+
 
 	}
 

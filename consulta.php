@@ -49,7 +49,7 @@
 						<?php endforeach; ?>
 				</table><br>
 			<div id="central">
-				<a href="index.php"><button id="button">Sair</button></a>
+				<a href="pag_01.php"><button id="button">Sair</button></a>
 			</div>
 		</div>
 	</body>
