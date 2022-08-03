@@ -18,7 +18,7 @@ session_start();
 		<div id="central">
 			<img src="img/cosvib.png" alt="logo">
 			<h1>Entrar no Sitema de Registros</h1>
-			<form method="POST" action="dados_login.php">
+			<form method="POST" action="">
 				<p>Digite seu Usuário:</p><input type="text" name="usuario"><br>
 				<p>Digite sua Senha:</p><input type="text" name="senha"><br>
 				<br><input type="submit" value="Entrar">
