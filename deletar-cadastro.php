@@ -28,7 +28,8 @@
 				<form method="POST" action="deletar-cadastro.php">
 					<input type="hidden" name="matricula" value="<?php echo $_GET['matricula']; ?>">
 						<button id="button">Excluir</button>
-				</form>
+				</form><br>
+				<a href="pag_01.php"><button id="button">Sair</button></a>
 			</div>
 		</div>
 	</body>

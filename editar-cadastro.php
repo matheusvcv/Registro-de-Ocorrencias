@@ -40,6 +40,7 @@
 							<input type="hidden" name="matricula" value="<?php echo $aluno['matricula'];?>">
 							<br><input type="submit" value="Aletrar">
 					</form>
+					<a href="pag_01.php"><button id="button">Sair</button></a>
 				</div>
 		</div>
 	</body>

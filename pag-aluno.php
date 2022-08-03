@@ -48,7 +48,7 @@
 			<?php endforeach; ?>
 	</div><br>
 	<div id="central">
-		<a href="consulta.php"><button id="button">Voltar</button></a>
+		<a href="consulta.php" rel="next"><button id="button">Voltar</button></a>
 	</div>
 </body>
 </html>

@@ -20,7 +20,7 @@ session_start();
 			<h1>Entrar no Sitema de Registros</h1>
 			<form method="POST" action="">
 				<p>Digite seu Usuário:</p><input type="text" name="usuario"><br>
-				<p>Digite sua Senha:</p><input type="text" name="senha"><br>
+				<p>Digite sua Senha:</p><input type="password" name="senha"><br>
 				<br><input type="submit" value="Entrar">
 			</form>
 		</div>

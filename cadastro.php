@@ -2,7 +2,7 @@
 	
 	require "conex.php";
 	require "src/aluno.php";
-
+	
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 		$adiciona = New Aluno($conex);
@@ -45,8 +45,10 @@
 						<option value="Integral">Integral</option>
 					</select><br>
 					<br><input type="submit" value="Cadastrar">
+					<input type="reset" value="Limpar">
 				</div>
 			</form>
+			<a href="pag_01.php"><button id="button">Sair</button></a>
 	</div>
 </body>
 </html>
