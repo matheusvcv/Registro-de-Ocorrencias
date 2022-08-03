@@ -24,27 +24,30 @@
 		<title>Cadastro</title>
 	</head>
 <body>
-	<h1>Cadastro de Alunos</h1>
-		<form method="POST" action="cadastro.php">
+	<div id="caixa">
+		<h1><img src="img/cosvib.png" align="left"> Cadastro de Alunos <img src="img/cosvib.png" align="right"></h1>
+			<form method="POST" action="cadastro.php">
 
-			<strong>Nome do Aluno:</strong><br>
-			<input type="text" name="nome"><br>
-			<br><strong>Matricula do Aluno:</strong><br>
-			<input type="text" name="matricula"><br>
-			<br><strong>Data de Nascimento Aluno:</strong><br>
-			<input type="date" name="data"><br>
-			<br><strong>Turma:</strong><br>
-			<input type="text" name="turma"><br>
-			<br><strong>Turno:</strong><br>
-			<select name="turno">
-				<option value="Resposta Ausente">Escolha uma opção</option>
-				<option value="Matutino">Matutino</option>
-				<option value="Vespertino">Vespertino</option>
-				<option value="Integral">Integral</option>
-			</select><br>
-
-			<br><input type="submit" value="Cadastrar">
-		</form>
+				<div id="central">
+					<strong>Nome do Aluno:</strong><br>
+					<input type="text" name="nome"><br>
+					<br><strong>Matricula do Aluno:</strong><br>
+					<input type="text" name="matricula"><br>
+					<br><strong>Data de Nascimento Aluno:</strong><br>
+					<input type="date" name="data"><br>
+					<br><strong>Turma:</strong><br>
+					<input type="text" name="turma"><br>
+					<br><strong>Turno:</strong><br>
+					<select name="turno">
+						<option value="Resposta Ausente">Escolha uma opção</option>
+						<option value="Matutino">Matutino</option>
+						<option value="Vespertino">Vespertino</option>
+						<option value="Integral">Integral</option>
+					</select><br>
+					<br><input type="submit" value="Cadastrar">
+				</div>
+			</form>
+	</div>
 </body>
 </html>
 

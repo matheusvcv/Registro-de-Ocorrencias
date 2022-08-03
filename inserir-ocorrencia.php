@@ -26,23 +26,25 @@
 		<title>Inserir Ocorrência</title>
 	</head>
 	<body>
-		<h1>Nova ocorrência</h1>
+		<div id="caixa">
+			<h1>Nova ocorrência</h1>
 
-		<p>Deseja inserir um registro no cadastro de <strong><?php echo $aluno['nome']; ?></p></strong>
+			<p>Deseja inserir um registro no cadastro de <strong><?php echo $aluno['nome']; ?></p></strong>
 
-		<form method="POST" action="inserir-ocorrencia.php">
+			<form method="POST" action="inserir-ocorrencia.php">
 
-			<input type="text" name="matricula2"  value="<?php echo $_GET['matricula'] ?>">
+				<input type="text" name="matricula2" disabled="true"  value="<?php echo $_GET['matricula'] ?>">
 
-			<p><strong>Data da ocorrência:</strong></p>
-			<input type="date" name="data_ocorrencia"><br>
+				<p><strong>Data da ocorrência:</strong></p>
+				<input type="date" name="data_ocorrencia"><br>
 
-			<strong><p>Relate o ocorrido:</p></strong>
-			<textarea name="ocorrencia" cols="30" rows="10"></textarea>
+				<strong><p>Relate o ocorrido:</p></strong>
+				<textarea name="ocorrencia" cols="30" rows="10"></textarea>
 
-			<input type="hidden" name="matricula" value="<?php echo $aluno['matricula'];?>">
+				<input type="hidden" name="matricula" value="<?php echo $aluno['matricula'];?>">
 
-			<br><input type="submit" value="Registrar">
-		</form>
+				<br><input type="submit" value="Registrar">
+			</form>
+		</div>
 	</body>
 </html>

@@ -8,20 +8,27 @@
 		<title>Registro de Alunos</title>
 	</head>
 	<body>
-		<h1>Registro de Ocorrências</h1>
-		<h2>O que você gostaria de fazer?</h2>
-
-		<a href="consulta.php">
-		<div id="bloco">
-			<h2>Consultar Aluno</h2>
+		<div id="faixa1">
+			<h1>Registro de Ocorrências</h1>
 		</div>
-		</a><br>
+		<div id="caixa">
+			<img src="img/cosvib.png" align="left">  <img src="img/cosvib.png" align="right">
+			<div id="central"><h2>O que você gostaria de fazer?</h2></div>
+			<div align="center">
 
-		<a href="cadastro.php">
-		<div id="bloco">
-			<h2>Cadastrar Novo Aluno</h2>
-		</div><br>
-		</a>
+				<a href="consulta.php">
+				<div id="bloco">
+					<h2>Consultar Aluno</h2>
+				</div>
+				</a><br>
 
+				<a href="cadastro.php">
+				<div id="bloco">
+					<h2>Cadastrar Novo Aluno</h2>
+				</div>
+
+			</div><br>
+			</a>
+		</div>
 	</body>
 </html>
