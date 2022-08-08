@@ -49,6 +49,7 @@
 
 		}
 
+
 		public function exibirIndividual(string $matricula): array
 		{
 			$exibirPorNome = $this->conexao->prepare("SELECT * FROM alunos WHERE matricula= ?");

@@ -2,7 +2,8 @@
 	
 	require "conex.php";
 	require "src/aluno.php";
-	
+
+
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 		$adiciona = New Aluno($conex);
