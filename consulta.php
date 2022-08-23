@@ -39,7 +39,7 @@
 					<tr>	
 							<td><a href="pag-aluno.php?matricula=<?php echo $aluno['matricula']; ?>"><?php echo $aluno['nome']; ?></a></td>
 							<td><?php echo $aluno['matricula']; ?></td>
-							<td><?php echo $aluno['nascimento']; ?></td>
+							<td><?php $usoData = strtotime($aluno['nascimento']); echo date('y/m/d', $usoData); ?></td>
 							<td><?php echo $aluno['turma']; ?></td>
 							<td><?php echo $aluno['turno']; ?></td>
 							<td><a href="editar-cadastro.php?matricula=<?php echo $aluno['matricula']; ?>"><img src="img/update.png"></a></td>

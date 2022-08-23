@@ -37,7 +37,11 @@
 
 				<div id="faixa">
 					<strong><p>Data ocorrencia:</strong> 
-					<?php echo $ocorrencia['data_ocorrencia']; ?></p>
+					<?php 
+						$usoData = strtotime($ocorrencia['data_ocorrencia']); 
+						echo date('y/m/d', $usoData);
+
+					?></p>
 				</div>
 				
 				<div id="container">
