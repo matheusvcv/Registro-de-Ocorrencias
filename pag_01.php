@@ -13,6 +13,9 @@ require "protect.php";
 		<title>Registro de Alunos</title>
 	</head>
 	<body>
+		<div align="right">
+				<a href="logout.php"><button id="button">Sair</button></a>
+		</div>
 		<div id="faixa1">
 			<h1>Registro de Ocorrências</h1>
 		</div>
