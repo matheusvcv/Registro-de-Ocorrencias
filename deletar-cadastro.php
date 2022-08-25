@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+	require "protect.php"; 
 	require "conex.php";
 	require "src/aluno.php";
 

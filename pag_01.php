@@ -1,6 +1,6 @@
 <?php
 
-include "conex.php";
+require "protect.php";
 
 ?>
 <!DOCTYPE html>
