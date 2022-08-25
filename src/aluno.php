@@ -41,7 +41,7 @@
 		public function exibirOcorrencias(string $matricula): array
 		{
 
-			$exibirOcorrencias = $this->conexao->query("SELECT data_ocorrencia, ocorrencia FROM ocorrencias WHERE matricula = $matricula");
+			$exibirOcorrencias = $this->conexao->query("SELECT id, data_ocorrencia, ocorrencia FROM ocorrencias WHERE matricula = $matricula");
 
 			$ocs = $exibirOcorrencias-> fetch_all(MYSQLI_ASSOC);
 
@@ -99,6 +99,15 @@
 
 			return $dados;
 
+		}
+
+		public function deletaOcorrencias(string $id): void
+		{
+			$deleta = $this->conexao->prepare("DELETE FROM ocorrencias WHERE id = ?");
+
+			$deleta-> bind_param('i', $id);
+
+			$deleta-> execute();
 		}
 
 

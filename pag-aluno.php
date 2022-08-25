@@ -8,6 +8,7 @@
 	$exibeOcorrencia = New Aluno($conex);
 	$ocorrencias = $exibeOcorrencia->exibirOcorrencias($_GET['matricula']);
 
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +26,7 @@
 		
 		<strong><p>Nome: </strong><?php echo $aluno['nome']; ?></p>
 		<strong><p>Matrícula: </strong><?php echo $aluno['matricula']; ?></p>
-		<strong><p>Data de Nascimento: </strong><?php echo $aluno['nascimento']; ?></p>
+		<strong><p>Data de Nascimento: </strong><?php $nas = strtotime($aluno['nascimento']); echo date('d/m/y', $nas);?></p>
 		<strong><p>Turma: </strong><?php echo $aluno['turma']; ?></p>
 		<strong><p>Turno: </strong><?php echo $aluno['turno']?></p>
 
@@ -47,6 +48,9 @@
 				<div id="container">
 					<strong><p>Ocorrencia:</p></strong> 
 					<p><?php echo $ocorrencia['ocorrencia']; ?></p>
+				<p>
+					<a href="deletar-ocorrencia.php?id=<?php echo $ocorrencia['id']; ?>"><button id="button">Excluir</button>
+				</p>
 				</div><br>
 
 			<?php endforeach; ?>
