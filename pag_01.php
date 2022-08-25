@@ -1,10 +1,7 @@
 <?php
-	session_start();
-	include "conex.php";
 
-	$logged = $_SESSION['logged'] ?? NULL;
+include "conex.php";
 
-	if(!$logged)die('Falha no Login.');
 ?>
 <!DOCTYPE html>
 <html>
