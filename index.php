@@ -14,12 +14,15 @@ require 'conex.php';
 	<title>Login</title>
 </head>
 <body>
+	<br><div id="caixa">
+		<div id="logo">
+			<img src="img/quadro.png">
+		</div>
+		<h1>Entrar no Sitema de Registros</h1>
+	</div>
 	<div id="caixa">
 		<div id="central">
-			<img src="img/cosvib.png" alt="logo">
-			<h1>Entrar no Sitema de Registros</h1>
 			<form method="POST" action="">
-
 				<p>Digite seu Usuário:</p><input type="text" name="usuario"><br>
 				<p>Digite sua Senha:</p><input type="password" name="senha"><br>
 			<?php
@@ -65,7 +68,7 @@ require 'conex.php';
 					}
 
 			?>
-				<br><input type="submit" value="Entrar">
+				<br><input type="submit" value="Entrar"><br>
 			</form>
 		</div>
 	</div>	

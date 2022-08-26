@@ -20,8 +20,8 @@ require "protect.php";
 			<h1>Registro de Ocorrências</h1>
 		</div>
 		<div id="caixa">
-			<img src="img/cosvib.png" align="left">  <img src="img/cosvib.png" align="right">
-			<div id="central"><h2>O que você gostaria de fazer?</h2></div>
+			<!-- <img src="img/cosvib.png" align="left">  <img src="img/cosvib.png" align="right"> -->
+			<div id="central"><p>Olá, <?php echo '<strong>' . $_SESSION['nome'] . '</strong>'; ?>! O que você gostaria de fazer? Inserir um novo aluno, ou consultar registros e ocorrências?</p></div>
 			<div align="center">
 
 				<a href="consulta.php">
