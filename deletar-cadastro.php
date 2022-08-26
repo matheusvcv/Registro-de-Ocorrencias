@@ -24,6 +24,9 @@
 		<title>Deletar Cadastro</title>
 	</head>
 	<body>
+		<div align="right">
+			<a href="logout.php"><button id="button">Sair</button></a>
+		</div>
 		<div id="caixa">
 			<div id="central">
 			<h1>Você realmente quer excluir esse cadastro?</h1>
@@ -31,7 +34,7 @@
 					<input type="hidden" name="matricula" value="<?php echo $_GET['matricula']; ?>">
 						<button id="button">Excluir</button>
 				</form><br>
-				<a href="pag_01.php"><button id="button">Sair</button></a>
+				<a href="pag_01.php"><button id="button">Voltar</button></a>
 			</div>
 		</div>
 	</body>

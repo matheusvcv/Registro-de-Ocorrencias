@@ -26,6 +26,9 @@
 		<title>Inserir Ocorrência</title>
 	</head>
 	<body>
+		<div align="right">
+			<a href="logout.php"><button id="button">Sair</button></a>
+		</div>
 		<div id="caixa">
 			<h1>Nova ocorrência</h1>
 
@@ -45,7 +48,7 @@
 
 				<br><input type="submit" value="Registrar">
 			</form><br>
-			<a href="pag_01.php"><button id="button">Sair</button></a>
+			<a href="pag_01.php"><button id="button">Voltar</button></a>
 		</div>
 	</body>
 </html>

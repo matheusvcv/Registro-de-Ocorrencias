@@ -26,6 +26,9 @@
 		<title>Cadastro</title>
 	</head>
 <body>
+	<div align="right">
+		<a href="logout.php"><button id="button">Sair</button></a>
+	</div>
 	<div id="caixa">
 		<h1><img src="img/cosvib.png" align="left"> Cadastro de Alunos <img src="img/cosvib.png" align="right"></h1>
 			<form method="POST" action="cadastro.php">
@@ -50,7 +53,7 @@
 					<input type="reset" value="Limpar">
 				</div>
 			</form>
-			<a href="pag_01.php"><button id="button">Sair</button></a>
+			<a href="pag_01.php"><button id="button">Voltar</button></a>
 	</div>
 </body>
 </html>

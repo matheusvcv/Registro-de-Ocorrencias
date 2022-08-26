@@ -21,6 +21,9 @@
 		<title>Página do Aluno</title>
 	</head>
 <body>
+	<div align="right">
+				<a href="logout.php"><button id="button">Sair</button></a>
+		</div>
 	<div id="caixa">
 	<h1>Págino do Aluno</h1>
 		<h2>Dados cadastrais: <img src="img/cosvib.png" align="right"></h2>
@@ -41,7 +44,7 @@
 					<strong><p>Data ocorrencia:</strong> 
 					<?php 
 						$usoData = strtotime($ocorrencia['data_ocorrencia']); 
-						echo date('y/m/d', $usoData);
+						echo date('d/m/y', $usoData);
 
 					?></p>
 				</div>
@@ -49,9 +52,11 @@
 				<div id="container">
 					<strong><p>Ocorrencia:</p></strong> 
 					<p><?php echo $ocorrencia['ocorrencia']; ?></p>
-				<p>
-					<a href="deletar-ocorrencia.php?id=<?php echo $ocorrencia['id']; ?>"><button id="button">Excluir</button>
-				</p>
+				</div>
+
+				<div id="faixa">
+					<a href="alterar-ocorrencia.php?id=<?php echo $ocorrencia['id']; ?>"><button id="button">Editar</button></a>
+					<a href="deletar-ocorrencia.php?id=<?php echo $ocorrencia['id']; ?>"><button id="button">Excluir</button></a>
 				</div><br>
 
 			<?php endforeach; ?>

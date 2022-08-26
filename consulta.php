@@ -19,6 +19,9 @@
 		<title>Registro de Alunos</title>
 	</head>
 	<body>
+		<div align="right">
+				<a href="logout.php"><button id="button">Sair</button></a>
+		</div>
 		<div id="caixa">
 		<div id="logo">
 			<img src="img/cosvib.png">
@@ -50,7 +53,7 @@
 						<?php endforeach; ?>
 				</table><br>
 			<div id="central">
-				<a href="pag_01.php"><button id="button">Sair</button></a>
+				<a href="pag_01.php"><button id="button">Voltar</button></a>
 			</div>
 		</div>
 	</body>

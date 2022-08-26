@@ -25,6 +25,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 		<title>Deletar Ocorrência</title>
 	</head>
 <body>
+	<div align="right">
+		<a href="logout.php"><button id="button">Sair</button></a>
+	</div>
 	<div id="caixa">
 		<h1>Excluir Ocorrências</h1>
 	</div>

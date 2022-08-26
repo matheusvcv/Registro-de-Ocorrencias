@@ -24,6 +24,9 @@
 		<title>Editar Cadastro</title>
 	</head>
 	<body>
+		<div align="right">
+			<a href="logout.php"><button id="button">Sair</button></a>
+		</div>
 		<div id="caixa">
 			<h1><img src="img/cosvib.png" align="left"> Alterar dados dos Alunos <img src="img/cosvib.png" align="right"></h1>
 				<div id="central">
@@ -41,7 +44,7 @@
 							<input type="hidden" name="matricula" value="<?php echo $aluno['matricula'];?>">
 							<br><input type="submit" value="Aletrar">
 					</form>
-					<a href="pag_01.php"><button id="button">Sair</button></a>
+					<a href="pag_01.php"><button id="button">Voltar</button></a>
 				</div>
 		</div>
 	</body>

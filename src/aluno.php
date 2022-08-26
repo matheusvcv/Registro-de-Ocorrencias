@@ -49,6 +49,17 @@
 
 		}
 
+		public function exibirOcorrenciasPorId(int $id): array
+		{
+
+			$exibirOcorrencias = $this->conexao->query("SELECT id, data_ocorrencia, ocorrencia FROM ocorrencias WHERE id = $id");
+
+			$ocs = $exibirOcorrencias-> fetch_all(MYSQLI_ASSOC);
+
+			return $ocs;
+
+		}
+
 
 		public function exibirIndividual(string $matricula): array
 		{
@@ -82,11 +93,11 @@
 			$alterar-> execute();
 		}
 
-		public function alteraOcorrencia(string $data_ocorrencia, string $ocorrencia, string $matricula): void
+		public function alteraOcorrencia(string $data_ocorrencia, string $ocorrencia, int $id): void
 		{
-			$alterar = $this->conexao->prepare("UPDATE alunos SET data_ocorrencia=?, ocorrencia=? WHERE matricula=?");
+			$alterar = $this->conexao->prepare("UPDATE ocorrencias SET data_ocorrencia=?, ocorrencia=? WHERE id=?");
 
-			$alterar-> bind_param('sss', $data_ocorrencia, $ocorrencia, $matricula);
+			$alterar-> bind_param('ssi', $data_ocorrencia, $ocorrencia, $id);
 
 			$alterar-> execute();
 		}
