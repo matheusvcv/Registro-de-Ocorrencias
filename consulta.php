@@ -28,7 +28,7 @@
 		</div>
 			<h1>Alunos Cadastrados</h1>
 
-			<div>
+			<div class="pesquisar">
 				<input type="text">
 				<input type="submit" value="Pesquisar">
 			</div>
