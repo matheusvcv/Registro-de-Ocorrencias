@@ -27,6 +27,11 @@
 			<img src="img/cosvib.png">
 		</div>
 			<h1>Alunos Cadastrados</h1>
+
+			<div>
+				<input type="text">
+			</div>
+
 				<table align="center">
 					<tr>
 						<th>Nome</th>
