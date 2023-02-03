@@ -30,6 +30,7 @@
 
 			<div>
 				<input type="text">
+				<input type="submit" value="Pesquisar">
 			</div>
 
 				<table align="center">

@@ -110,6 +110,7 @@ input[type=submit]{
   color: #fff;
   height: 25px;
   width: 90px;
+  cursor:  pointer;
 }
 
 
