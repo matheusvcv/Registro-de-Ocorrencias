@@ -8,6 +8,7 @@ require "protect.php";
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" width="device-width initial-scale=1.0">
+		<link rel="stylesheet" href="src/node_modules/bootstrap/dist/css/bootstrap.css">
 		<link rel="shortcut icon" href="img/cosvi.png" type="image/x-icon">
 		<link rel="stylesheet" href="style.css">
 		<title>Registro de Alunos</title>
